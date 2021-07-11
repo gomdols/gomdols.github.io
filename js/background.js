@@ -49,6 +49,7 @@ const backgrounds = [
         },
     },//7
 ];
+const musicInfo = document.querySelector(".music-info");
 
 const chosenBackgrounds = backgrounds[Math.floor(Math.random() * backgrounds.length)]
 
@@ -57,11 +58,10 @@ const bgImage = document.createElement("img");
 bgImage.src = `src/img/${chosenBackgrounds.img}`
 bgImage.classList.add("bgImg")
 
-/*
+document.body.appendChild(bgImage);
+
 const bgMusic = document.createElement("audio");
 
-bgMusic.muted = true;
-bgMusic.autoplay = true;
 bgMusic.loop = true;
 bgMusic.classList.add("bgm");
 
@@ -69,11 +69,17 @@ const bgMusicSource = document.createElement("source");
 bgMusicSource.src = `src/music/${chosenBackgrounds.music.title}`
 
 document.body.appendChild(bgMusic);
-*/
 
-document.body.appendChild(bgImage);
-/*
 const bgmSelector = document.querySelector(".bgm");
 bgmSelector.appendChild(bgMusicSource);
-bgmSelector.volume = 0.015;
-*/
+bgmSelector.volume = 0.018;
+
+function musicPlay() {
+    const filename = musicInfo.querySelector("span:first-child");
+    const author = musicInfo.querySelector("span:last-child");
+    filename.innerText = `FileName : ${chosenBackgrounds.music.title}`;
+    author.innerText = `Author : ${chosenBackgrounds.music.author}`;
+    bgmSelector.play();
+}
+
+document.body.addEventListener("mousemove", musicPlay);
