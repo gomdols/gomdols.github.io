@@ -3,6 +3,7 @@ const signinInput = signinForm.querySelector("input");
 const greeting = document.querySelector("#greeting");
 const changeUsername = document.querySelector(".change-username");
 const clock = document.querySelector(".clock");
+const tmiSelector = document.querySelector("#tmi");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username"
@@ -31,6 +32,7 @@ function onChangeUsername(event){
     greeting.classList.add(HIDDEN_CLASSNAME);
     changeUsername.classList.add(HIDDEN_CLASSNAME);
     clock.classList.add(HIDDEN_CLASSNAME);
+    tmi.classList.add(HIDDEN_CLASSNAME);
     signinForm.classList.remove(HIDDEN_CLASSNAME);
     localStorage.removeItem(USERNAME_KEY);
 }
@@ -39,7 +41,8 @@ function paintGreetings(username) {
     greeting.innerText = `Welcome ${username} expedition!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
     changeUsername.classList.remove(HIDDEN_CLASSNAME);
-    clock.classList.remove(HIDDEN_CLASSNAME)
+    clock.classList.remove(HIDDEN_CLASSNAME);
+    tmi.classList.remove(HIDDEN_CLASSNAME);
 }
 
 changeUsername.querySelector("a").addEventListener("click", onChangeUsername);
