@@ -2,7 +2,7 @@ const signinForm = document.querySelector("#signin-form");
 const signinInput = signinForm.querySelector("input");
 const greeting = document.querySelector("#greeting");
 const changeUsername = document.querySelector(".change-username");
-const clock = document.querySelector(".clock")
+const clock = document.querySelector(".clock");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username"
@@ -36,7 +36,7 @@ function onChangeUsername(event){
 }
 
 function paintGreetings(username) {
-    greeting.innerText = `Hello ${username}`;
+    greeting.innerText = `Welcome ${username} expedition!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
     changeUsername.classList.remove(HIDDEN_CLASSNAME);
     clock.classList.remove(HIDDEN_CLASSNAME)
