@@ -1,13 +1,18 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Roboto+Slab&display=swap');
 
 body{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .hidden{
-    display: none;
+    display: none !important;
 }
 
 .bgImg{
@@ -17,4 +22,81 @@ body{
     left: 50%;
     z-index: -1;
     transform: translate(-50%, -50%);
+    min-height: 800px;
+}
+
+h2.clock{
+    font-size: 96px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 10%;
+    margin-bottom: 20px;
+}
+
+h1#greeting{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    font-size: 32px;
+}
+span.change-username{
+    font-size: 14px;
+}
+
+#tmi{
+    position: absolute;
+    bottom: 0;
+    font-size: 24px;
+    padding: 10px;
+    width: 70%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    height: 26px;
+}
+#tmi > span:last-child{
+    display: block;
+    font-size: 16px;
+}
+#tmi:hover{
+    height: 46px;
+}
+#signin-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px) brightness(60%);
+}
+#signin-form > input{
+    font-size: 52px;
+    background: none;
+    border: none;
+    color: #000;
+    border-bottom: 2px solid #fff;
+    transition: border 0.2s;
+}
+#signin-form > input::placeholder{
+    color: #000;
+}
+#signin-form > input:focus{
+    outline: none;
+    border-bottom: 2px solid cornflowerblue;
+}
+#signin-form > button{
+    margin: 10px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #fff;
+    border: none;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+#signin-form > button:hover{
+    color: #fff;
+    background-color: cornflowerblue;
 }

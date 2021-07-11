@@ -4,6 +4,7 @@ const greeting = document.querySelector("#greeting");
 const changeUsername = document.querySelector(".change-username");
 const clock = document.querySelector(".clock");
 const tmiSelector = document.querySelector("#tmi");
+const ToDoForm = document.querySelector("#todo-form");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username"
@@ -21,7 +22,7 @@ function onSigninSubmit(event) {
 if (savedUsername === null) {
     signinForm.classList.remove(HIDDEN_CLASSNAME);
 } else {
-    paintGreetings(savedUsername)
+    paintGreetings(savedUsername);
 }
 
 signinForm.addEventListener("submit", onSigninSubmit);
@@ -33,6 +34,7 @@ function onChangeUsername(event){
     changeUsername.classList.add(HIDDEN_CLASSNAME);
     clock.classList.add(HIDDEN_CLASSNAME);
     tmiSelector.classList.add(HIDDEN_CLASSNAME);
+    ToDoForm.classList.add(HIDDEN_CLASSNAME);
     signinForm.classList.remove(HIDDEN_CLASSNAME);
     localStorage.removeItem(USERNAME_KEY);
 }
@@ -42,7 +44,8 @@ function paintGreetings(username) {
     greeting.classList.remove(HIDDEN_CLASSNAME);
     changeUsername.classList.remove(HIDDEN_CLASSNAME);
     clock.classList.remove(HIDDEN_CLASSNAME);
-    tmi.classList.remove(HIDDEN_CLASSNAME);
+    tmiSelector.classList.remove(HIDDEN_CLASSNAME);
+    ToDoForm.classList.remove(HIDDEN_CLASSNAME);
 }
 
 changeUsername.querySelector("a").addEventListener("click", onChangeUsername);

@@ -56,11 +56,14 @@ const bgImage = document.createElement("img");
 
 bgImage.src = `src/img/${chosenBackgrounds.img}`
 bgImage.classList.add("bgImg")
+
 /*
 const bgMusic = document.createElement("audio");
 
+bgMusic.muted = true;
+bgMusic.autoplay = true;
 bgMusic.loop = true;
-bgMusic.classList.add("bgm")
+bgMusic.classList.add("bgm");
 
 const bgMusicSource = document.createElement("source");
 bgMusicSource.src = `src/music/${chosenBackgrounds.music.title}`
@@ -69,7 +72,6 @@ document.body.appendChild(bgMusic);
 */
 
 document.body.appendChild(bgImage);
-
 /*
 const bgmSelector = document.querySelector(".bgm");
 bgmSelector.appendChild(bgMusicSource);
