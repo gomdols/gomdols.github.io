@@ -44,10 +44,6 @@ const tmi = [
 const tmiTitle = tmiSelector.querySelector("span:first-child");
 const tmiContents = tmiSelector.querySelector("span:last-child");
 
-function randomTmi() {
-    const randomIndex = Math.floor(Math.random() * tmi.length);
-    tmiTitle.innerText = tmi[randomIndex].title;
-    tmiContents.innerText = tmi[randomIndex].contents;
-}
-
-randomTmi();
+const randomIndex = Math.floor(Math.random() * tmi.length);
+tmiTitle.innerText = tmi[randomIndex].title;
+tmiContents.innerText = tmi[randomIndex].contents;

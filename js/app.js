@@ -32,7 +32,7 @@ function onChangeUsername(event){
     greeting.classList.add(HIDDEN_CLASSNAME);
     changeUsername.classList.add(HIDDEN_CLASSNAME);
     clock.classList.add(HIDDEN_CLASSNAME);
-    tmi.classList.add(HIDDEN_CLASSNAME);
+    tmiSelector.classList.add(HIDDEN_CLASSNAME);
     signinForm.classList.remove(HIDDEN_CLASSNAME);
     localStorage.removeItem(USERNAME_KEY);
 }

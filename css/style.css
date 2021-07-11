@@ -1,6 +1,20 @@
 @charset "utf-8";
 
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
 .hidden{
     display: none;
+}
+
+.bgImg{
+    height: 130vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
 }
